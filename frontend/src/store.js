@@ -19,7 +19,7 @@ export default new Vuex.Store({
     },
     actions: {
         setUsuario({ commit }, usuario) {
-            if(usuario && usuario.token) {
+            if(usuario && usuario.token) {                
                 localStorage.setItem('token', usuario.token)
             } else {
                 localStorage.removeItem('token')

@@ -61,6 +61,17 @@ export default {
     methods: {
         ...mapActions(['setUsuario']),
         login() {
+            /** 
+            this.setUsuario({
+                id: 1,
+                nome: 'Usuario Teste',
+                email: 'usuario@hotmail.com',
+                perfis: [{
+                    nome: 'admin'
+                }],
+                token: 'abc123'
+            })
+             */
             this.$api.query({
                 query: gql`
                     query (
@@ -89,7 +100,9 @@ export default {
             }).catch(e => {
                 this.erros = e
             })
+           
         }
+        
     }
 }
 </script>
