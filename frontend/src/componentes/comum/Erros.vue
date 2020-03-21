@@ -21,9 +21,9 @@ export default {
                 itens.push(...e.graphQLErrors)
             }
             
-            // if(e.networkError) {
-            //     itens.push(e.networkError)
-            // }
+            if(e.networkError) {
+                itens.push(e.networkError)
+            }
 
             if(itens.length === 0) {
                 itens.push({
